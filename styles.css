@@ -71,7 +71,7 @@ section{
     align-items: flex-start;
     text-align: center;
     min-height: 100vh;
-    min-width: 100%;
+    max-width: 100%;
     background-color: rgba(50, 0, 100, 0.3);
     padding: 2rem;
     
@@ -98,7 +98,7 @@ section{
         rgba(0, 0, 0, 0.2)
     );
     background-size: 100% 8px;
-    z-index: 2;
+    z-index: 3;
     pointer-events: none;
 }
 
@@ -129,7 +129,7 @@ section{
     animation: glitch 1s infinite;
 }
 
-.terminal-nav a:hover{
+.terminal-nav a:hover, .projects a:hover{
     color: var(--primary-text-color);
     animation: glitch 1s;
 }
@@ -242,7 +242,7 @@ section{
 }
 
 .skill{
-    font-size: 8rem;
+    font-size: 6rem;
     color: var(--secondary-text-color);
     padding: 1rem;
     color: var(--secondary-text-color);
@@ -250,7 +250,44 @@ section{
 }
 
 /*======================================= Projects */
+.projects-container{
+    display: flex;
+    justify-content: center;
+}
 
+.project{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.project img{
+    width: 400px;
+    height: 400px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.project-image{
+    position: relative;
+}
+
+.project-image .overlay{
+    position: absolute;
+    background-color: var(--secondary-text-color);
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    opacity: 0.5;
+    animation: imageShadow 2.5s infinite;
+}
+
+.project i{
+    font-size: 2.5rem;
+}
 
 /*======================================= Footer */
 footer{
@@ -258,11 +295,15 @@ footer{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 2.5rem;
+    gap: 1rem;
     font-size: 1.5rem;
+    background-color: rgba(50, 0, 100, 0.3);
     padding: 2rem;
 }
 
+footer p{
+    font-size: 1.5rem;
+}
 
 /* Scroll effect */
 .hidden{
@@ -299,6 +340,24 @@ footer{
     }
     100% {
         text-shadow: 0.16rem 0 0.06rem rgba(0,30,255,0.5), -0.16rem 0 0.06rem rgba(255,0,80,0.3), 0 0 0.18rem;
+    }
+  }
+
+@keyframes imageShadow {
+    0% {
+      box-shadow: 0.05rem 0 0.06rem rgba(0,30,255,0.5), -0.05rem 0 0.06rem rgba(255,0,80,0.3), 0 0 0.18rem;
+    }
+    25% {
+        box-shadow: 0.2rem 0 0.06rem rgba(0,30,255,0.5), -0.2rem 0 0.06rem rgba(255,0,80,0.3), 0 0 0.18rem;
+    }
+    50% {
+        box-shadow: 0.08rem 0 0.06rem rgba(0,30,255,0.5), -0.08rem 0 0.06rem rgba(255,0,80,0.3), 0 0 0.18rem;
+    }
+    75% {
+        box-shadow: 0.1rem 0 0.06rem rgba(0,30,255,0.5), -0.1rem 0 0.06rem rgba(255,0,80,0.3), 0 0 0.18rem;
+    }
+    100% {
+        box-shadow: 0.16rem 0 0.06rem rgba(0,30,255,0.5), -0.16rem 0 0.06rem rgba(255,0,80,0.3), 0 0 0.18rem;
     }
   }
 
