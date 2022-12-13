@@ -18,6 +18,7 @@
     --primary-text-color: #03deee;
     --secondary-text-color: #008cc4;
     --primary-button-color: #ff2a6d;
+    --secondary-button-color: hsl(341, 100%, 40%);
     --fs-body: 2.5rem;
     --fs-header: 5rem;
 }
@@ -64,9 +65,19 @@ section{
     padding: 2rem;
 }
 
+.section-skills-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    text-align: center;
+    min-width: 100%;
+    background-color: rgba(50, 0, 100, 0.3);
+    padding: 2rem;
+}
+
 .section-terminal-container{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     text-align: center;
@@ -130,7 +141,7 @@ section{
 }
 
 .terminal-nav a:hover, .projects a:hover{
-    color: var(--primary-text-color);
+    color: var(--secondary-button-color);
     animation: glitch 1s;
 }
 
@@ -243,9 +254,8 @@ section{
 
 .skill{
     font-size: 6rem;
-    color: var(--secondary-text-color);
     padding: 1rem;
-    color: var(--secondary-text-color);
+    color: var(--secondary-button-color);
     animation: textShadow 2.5s infinite;
 }
 
