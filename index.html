@@ -34,9 +34,9 @@
                     <!-- Button section -->
                     <div class="terminal-buttons">
                         <p>Use arrow keys to change selection!</p>
-                        <span class="primary-text" >> </span><a href="#about" class="terminal-btn active">About</a>
-                        <a href="#projects" class="terminal-btn">Projects</a>
-                        <a href="#contact" class="terminal-btn">Contact</a>
+                        <span class="primary-text" >> </span><a class="terminal-btn active" onclick="navScroll('about');">About</a>
+                        <a class="terminal-btn" onclick="navScroll('projects');">Projects</a>
+                        <a class="terminal-btn" onclick="navScroll('contact');">Contact</a>
                     </div>
                 </div>
             </div>
@@ -44,12 +44,12 @@
 
         <section id="about" class="about">
             <div class="grid">
-                <div class="section-terminal about-me">
+                <div class="section-terminal about-me hidden">
                     <h2>About Me</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aliquam, quis tempora nam est ut mollitia pariatur deserunt voluptas alias, atque quas dolor magnam itaque voluptate iure, neque a soluta porro dicta qui ipsam! Repellat eos labore delectus explicabo molestias.</p>
                 </div>
 
-                <div class="section-terminal">
+                <div class="section-terminal hidden">
                     <h2>Education</h2>
                     <!-- timeline -->
                     <ul class="timeline">
@@ -74,12 +74,12 @@
                     </ul>
                 </div>
                 
-                <div class="section-terminal">
+                <div class="section-terminal hidden">
                     <h2>Experience</h2>
                     <!-- timeline -->
                     <ul class="timeline">
                         <li>
-                            <div class="li-wrapper left">
+                            <div class="li-wrapper right">
                                 <h4>November 2020</h4>
                                 <p>Currently, I work as a solutions engineer at my nearby university.</p>
                             </div>
@@ -90,8 +90,8 @@
         </section>
 
         <section id="skills" class="skills">
-            <div class="section-skills-container">
-                <div class="section-terminal">
+            <div class="section-terminal-container">
+                <div class="section-terminal hidden">
                     <h2>Skills</h2>
                     <div class="skills-container">
                         <i class="devicon-html5-plain skill"></i>
@@ -111,7 +111,7 @@
 
         <section id="projects" class="projects">
             <div class="section-terminal-container">
-                <div class="section-terminal">
+                <div class="section-terminal hidden">
                     <h2>Projects</h2>
                     <div class="projects-container">
                         <div class="project">
@@ -148,6 +148,22 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="section-terminal-container">
+                    <h1>Contact Me</h1>
+                    <div class="my-email">
+                        <i class='bx bxs-envelope'></i><span>noaherod18@gmail.com</span>
+                    </div>
+                    <form action="#" class="contact-form">
+                        <input type="text" class="contact-fields" placeholder="Your Name" required>
+                        <input type="email" class="contact-fields" placeholder="Your Email" required>
+                        <input type="text" class="contact-fields" placeholder="Subject" required>
+                        <textarea name="email-message" id="email-message" cols="30" rows="10" class="email-message contact-fields" placeholder="Your Message Here"></textarea>
+                        <input type="submit" value="Send" class="contact-btn">
+                    </form>
             </div>
         </section>
     </div>

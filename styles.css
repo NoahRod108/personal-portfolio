@@ -68,7 +68,7 @@ section{
 .section-skills-container{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: nowrap;
     text-align: center;
     min-width: 100%;
@@ -79,7 +79,8 @@ section{
 .section-terminal-container{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     min-height: 100vh;
     max-width: 100%;
@@ -151,6 +152,7 @@ section{
 
 .terminal-buttons a{
     margin-right: 3rem;
+    cursor: pointer;
 }
 
 .terminal-nav a i{
@@ -169,7 +171,7 @@ section{
 /*======================================= About */
 .about-me{
     grid-column: span 2;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 /* timeline */
@@ -199,7 +201,7 @@ section{
     font-size: 1.5rem;
   }
 
-  .li-wrapper p, span{
+  .li-wrapper p{
     font-size: 1.5rem;
     text-align: left;
     padding: 1rem 0;
@@ -257,6 +259,40 @@ section{
     padding: 1rem;
     color: var(--secondary-button-color);
     animation: textShadow 2.5s infinite;
+    display: none;
+    transition: .5s ease-in;
+}
+
+.skill:nth-child(2){
+    transition-delay: 200ms;
+    display: inline;
+}
+.skill:nth-child(3){
+    transition-delay: 400ms;
+    display: inline;
+}
+.skill:nth-child(4){
+    transition-delay: 600ms;
+    display: inline;
+}
+.skill:nth-child(5){
+    transition-delay: 800ms;
+    display: inline;
+}
+.skill:nth-child(6){
+    transition-delay: 1000ms;
+}
+.skill:nth-child(7){
+    transition-delay: 1200ms;
+}
+.skill:nth-child(8){
+    transition-delay: 1400ms;
+}
+.skill:nth-child(9){
+    transition-delay: 1600ms;
+}
+.skill:nth-child(10){
+    transition-delay: 1800ms;
 }
 
 /*======================================= Projects */
@@ -300,6 +336,54 @@ section{
 }
 
 /*======================================= Footer */
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 60%;
+    height: 100%;
+    padding: 2rem;
+    border-radius: 8px;
+    height: 600px;
+}
+
+.contact-fields{
+    background: rgba(50, 0, 100, 0.3);
+    color: var(--primary-text-color);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+}
+.contact-fields::placeholder{
+    color: var(--secondary-text-color);
+}
+
+.contact-btn{
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--primary-text-color);
+    background: var(--secondary-button-color);
+    cursor: pointer;
+}
+.contact-btn:hover{
+    background: var(--primary-button-color);
+    color: var(--secondary-text-color);
+}
+
+.my-email{
+    display: flex;
+    align-items: center;
+}
+
+.my-email i{
+    font-size: 2.5rem;
+    color: var(--secondary-text-color);
+    animation: textShadow 2.5s infinite;
+    padding: 0.5rem;
+}
+
+/*======================================= Footer */
 footer{
     display: flex;
     flex-direction: column;
@@ -307,8 +391,8 @@ footer{
     text-align: center;
     gap: 1rem;
     font-size: 1.5rem;
-    background-color: rgba(50, 0, 100, 0.3);
-    padding: 2rem;
+    background: rgba(50, 0, 100, 0.3);
+    padding: 2.5rem;
 }
 
 footer p{
