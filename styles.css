@@ -90,9 +90,10 @@ section{
 }
 
 .section-terminal{
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* gradient lines for screen effect */
@@ -171,11 +172,15 @@ section{
 /*======================================= About */
 .about-me{
     grid-column: span 2;
-    margin-bottom: 2rem;
 }
 
-/* timeline */
-.timeline{
+.about-section i{
+    font-size: 5rem;
+    color: var(--secondary-text-color);
+    animation: textShadow 2.5s infinite;
+}
+
+/* .timeline{
     position: relative;
     margin: 0 auto;
 }
@@ -247,7 +252,7 @@ section{
 
   .right p{
     padding-left: 1rem;
-  }
+  } */
 
 /*======================================= About */
 .skills-container{
@@ -281,18 +286,23 @@ section{
 }
 .skill:nth-child(6){
     transition-delay: 1000ms;
+    display: inline;
 }
 .skill:nth-child(7){
     transition-delay: 1200ms;
+    display: inline;
 }
 .skill:nth-child(8){
     transition-delay: 1400ms;
+    display: inline;
 }
 .skill:nth-child(9){
     transition-delay: 1600ms;
+    display: inline;
 }
 .skill:nth-child(10){
     transition-delay: 1800ms;
+    display: inline;
 }
 
 /*======================================= Projects */
@@ -321,7 +331,7 @@ section{
 
 .project-image .overlay{
     position: absolute;
-    background-color: var(--secondary-text-color);
+    background: var(--secondary-text-color);
     top: 0;
     bottom: 0;
     width: 100%;
@@ -329,6 +339,22 @@ section{
     border-radius: 8px;
     opacity: 0.5;
     animation: imageShadow 2.5s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image .overlay p{
+    display: none;
+}
+
+.project-image .overlay:hover{
+    opacity: 1;
+    background: var(--secondary-button-color);
+}
+.project-image .overlay:hover p{
+    display: block;
+    color: var(--primary-text-color);
 }
 
 .project i{

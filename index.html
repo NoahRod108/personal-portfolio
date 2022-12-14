@@ -34,8 +34,8 @@
                     <!-- Button section -->
                     <div class="terminal-buttons">
                         <p>Use arrow keys to change selection!</p>
-                        <span class="primary-text" >> </span><a class="terminal-btn active" onclick="navScroll('about');">About</a>
-                        <a class="terminal-btn" onclick="navScroll('projects');">Projects</a>
+                        <span class="primary-text" >> </span><a class="terminal-btn active" onclick="navScroll('projects');">Projects</a>
+                        <a class="terminal-btn" onclick="navScroll('about');">About</a>
                         <a class="terminal-btn" onclick="navScroll('contact');">Contact</a>
                     </div>
                 </div>
@@ -48,44 +48,24 @@
                     <h2>About Me</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aliquam, quis tempora nam est ut mollitia pariatur deserunt voluptas alias, atque quas dolor magnam itaque voluptate iure, neque a soluta porro dicta qui ipsam! Repellat eos labore delectus explicabo molestias.</p>
                 </div>
-
-                <div class="section-terminal hidden">
-                    <h2>Education</h2>
-                    <!-- timeline -->
-                    <ul class="timeline">
-                        <li>
-                            <div class="li-wrapper left">
-                                <h4>August 2015</h4>
-                                <p>Purdue University Northwest - I started my journey in electrical computer engineering technology (ECET). However, after my first year, I switched to IT and focused on security. It wasn't until my final year when I found my passion for web development.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="li-wrapper right">
-                                <h4>December 2020</h4>
-                                <p>I Graduated from Purdue University Northwest with a Bachelor of Science in Computer Information Technology.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="li-wrapper left">
-                                <h4>Present</h4>
-                                <p>I am continuously expanding my knowledge in web development, so I can deliver interactive user experiences.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="section-terminal hidden">
-                    <h2>Experience</h2>
-                    <!-- timeline -->
-                    <ul class="timeline">
-                        <li>
-                            <div class="li-wrapper right">
-                                <h4>November 2020</h4>
-                                <p>Currently, I work as a solutions engineer at my nearby university.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <div class="section-terminal about-section">
+                    <div>
+                        <i class='bx bxs-graduation'></i>
+                        <p>2015 - 2020</p>
+                    </div>
+                    <p class="primary-text">Bachelor of Science in Computer Information Technology</p>
+                    <p>Purdue University Northwest, Westville, IN</p>
+                </div>                
+                <div class="section-terminal about-section">
+                    <div class="section-terminal about-section">
+                        <div>
+                            <i class='bx bxs-briefcase'></i>
+                            <p>2020 - current</p>
+                        </div>
+                        <p class="primary-text">Solutions Engineer</p>
+                        <p>University</p>
+                    </div>                
+                </div>                
             </div>
         </section>
 
@@ -94,16 +74,16 @@
                 <div class="section-terminal hidden">
                     <h2>Skills</h2>
                     <div class="skills-container">
-                        <i class="devicon-html5-plain skill"></i>
-                        <i class="devicon-css3-plain skill"></i>
-                        <i class="devicon-javascript-plain skill"></i>
-                        <i class="devicon-php-plain skill"></i>
-                        <i class="devicon-react-original skill"></i>
-                        <i class="devicon-materialui-plain skill"></i>
-                        <i class="devicon-npm-original-wordmark skill"></i>
-                        <i class="devicon-nodejs-plain skill"></i>
-                        <i class="devicon-express-original skill"></i>
-                        <i class="devicon-mysql-plain skill"></i>
+                        <i class="devicon-html5-plain skill hidden"></i>
+                        <i class="devicon-css3-plain skill hidden"></i>
+                        <i class="devicon-javascript-plain skill hidden"></i>
+                        <i class="devicon-php-plain skill hidden"></i>
+                        <i class="devicon-react-original skill hidden"></i>
+                        <i class="devicon-materialui-plain skill hidden"></i>
+                        <i class="devicon-npm-original-wordmark skill hidden"></i>
+                        <i class="devicon-nodejs-plain skill hidden"></i>
+                        <i class="devicon-express-original skill hidden"></i>
+                        <i class="devicon-mysql-plain skill hidden"></i>
                     </div>
                 </div>
             </div>
@@ -117,29 +97,35 @@
                         <div class="project">
                             <div class="project-image">
                                 <img src="./assets/images/admin_portal.PNG" alt="">
-                                <div class="overlay"></div>
+                                <div class="overlay">
+                                    <p class="project-text">Admin portal</p>
+                                </div>
                             </div>
                             <div>                                
-                                <a href="" target="_blank"><i class="devicon-github-original"></i></a>
-                                <a href="" target="_blank"><i class='bx bx-link-external'></i></a>
+                                <a href="https://github.com/NoahRod108/admin-portal" target="_blank"><i class="devicon-github-original"></i></a>
+                                <a href="https://noahrod108.github.io/admin-portal" target="_blank"><i class='bx bx-link-external'></i></a>
                             </div>
                         </div>
 
                         <div class="project">
                             <div class="project-image">
                                 <img src="./assets/images/guess_that_pokemon.PNG" alt="">
-                                <div class="overlay"></div>
+                                <div class="overlay">
+                                    <p class="project-text">Guess That Pokemon</p>
+                                </div>
                             </div>
                             <div>                                
-                                <a href="" target="_blank"><i class="devicon-github-original"></i></a>
-                                <a href="" target="_blank"><i class='bx bx-link-external'></i></a>
+                                <a href="https://github.com/NoahRod108/guess-that-pokemon" target="_blank"><i class="devicon-github-original"></i></a>
+                                <a href="https://noahrod108.github.io/guess-that-pokemon/" target="_blank"><i class='bx bx-link-external'></i></a>
                             </div>
                         </div>
 
                         <div class="project">
                             <div class="project-image">
                                 <img src="./assets/images/guess_that_pokemon.PNG" alt="">
-                                <div class="overlay"></div>
+                                <div class="overlay">
+                                    <p class="project-text">Spirit Corner</p>
+                                </div>
                             </div>
                             <div>                                
                                 <a href="" target="_blank"><i class="devicon-github-original"></i></a>
@@ -155,13 +141,12 @@
             <div class="section-terminal-container">
                     <h1>Contact Me</h1>
                     <div class="my-email">
-                        <i class='bx bxs-envelope'></i><span>noaherod18@gmail.com</span>
+                        <i class='bx bxs-envelope hidden'></i><span>noaherod18@gmail.com</span>
                     </div>
-                    <form action="#" class="contact-form">
-                        <input type="text" class="contact-fields" placeholder="Your Name" required>
-                        <input type="email" class="contact-fields" placeholder="Your Email" required>
-                        <input type="text" class="contact-fields" placeholder="Subject" required>
-                        <textarea name="email-message" id="email-message" cols="30" rows="10" class="email-message contact-fields" placeholder="Your Message Here"></textarea>
+                    <form action="https://formsubmit.co/noaherod18@gmail.com" method="POST" class="contact-form hidden">
+                        <input type="text" name="name" class="contact-fields" placeholder="Your Name" required>
+                        <input type="email" name="email" class="contact-fields" placeholder="Your Email" required>
+                        <textarea name="message" id="email-message" cols="30" rows="10" class="email-message contact-fields" placeholder="Your Message Here"></textarea>
                         <input type="submit" value="Send" class="contact-btn">
                     </form>
             </div>
