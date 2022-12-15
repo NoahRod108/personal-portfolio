@@ -33,7 +33,6 @@ p, li, span, label, input, textarea, a{
     font-size: var(--fs-body);
     color: var(--secondary-text-color);
     animation: textShadow 2.5s infinite;
-    padding: .5rem;
 }
 
 h1, h2, h3, h4, h5{
@@ -151,6 +150,10 @@ section{
     margin-top: 5rem;
 }
 
+.terminal-buttons p{
+    padding-bottom: 1rem;
+}
+
 .terminal-buttons a{
     margin-right: 3rem;
     cursor: pointer;
@@ -178,6 +181,9 @@ section{
     font-size: 5rem;
     color: var(--secondary-text-color);
     animation: textShadow 2.5s infinite;
+}
+.about-me p{
+    padding: 2rem;
 }
 
 /* .timeline{

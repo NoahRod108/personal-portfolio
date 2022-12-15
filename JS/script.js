@@ -61,8 +61,8 @@ const handleKeyPress = (e) => {
 
     if(keyCode === 13 && !e.target.classList.contains("contact-fields")){
         e.preventDefault();
-        
-        window.open(activeTerminalButton[0].href, '_blank');
+        const navItem = document.getElementById(activeTerminalButton[0].name);
+        navItem.scrollIntoView({behavior: 'smooth'});
     }
 }
 
