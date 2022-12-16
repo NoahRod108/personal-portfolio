@@ -10,6 +10,7 @@
     list-style: none;
     outline: 0;
     font-size: 16px;
+    letter-spacing: 0.2rem;
 }
 
 :root{
@@ -142,6 +143,7 @@ section{
 }
 
 .terminal-nav a:hover, .projects a:hover{
+    transition: .5s;
     color: var(--secondary-button-color);
     animation: glitch 1s;
 }
@@ -262,7 +264,9 @@ section{
 
 /*======================================= About */
 .skills-container{
-    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .skill{
@@ -270,51 +274,46 @@ section{
     padding: 1rem;
     color: var(--secondary-button-color);
     animation: textShadow 2.5s infinite;
-    display: none;
     transition: .5s ease-in;
 }
 
 .skill:nth-child(2){
     transition-delay: 200ms;
-    display: inline;
 }
 .skill:nth-child(3){
     transition-delay: 400ms;
-    display: inline;
 }
 .skill:nth-child(4){
     transition-delay: 600ms;
-    display: inline;
 }
 .skill:nth-child(5){
     transition-delay: 800ms;
-    display: inline;
 }
 .skill:nth-child(6){
     transition-delay: 1000ms;
-    display: inline;
 }
 .skill:nth-child(7){
     transition-delay: 1200ms;
-    display: inline;
 }
 .skill:nth-child(8){
     transition-delay: 1400ms;
-    display: inline;
 }
 .skill:nth-child(9){
     transition-delay: 1600ms;
-    display: inline;
 }
 .skill:nth-child(10){
     transition-delay: 1800ms;
-    display: inline;
+}
+.skill:nth-child(11){
+    transition-delay: 2000ms;
 }
 
 /*======================================= Projects */
 .projects-container{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .project{
@@ -350,21 +349,42 @@ section{
     justify-content: center;
 }
 
-.project-image .overlay p{
+.overlay-content{
     display: none;
+}
+
+.overlay-content p, .overlay-content a{
+    color: var(--primary-text-color);
+}
+.overlay-content a:hover{
+    color: var(--secondary-text-color);
 }
 
 .project-image .overlay:hover{
     opacity: 1;
     background: var(--secondary-button-color);
 }
-.project-image .overlay:hover p{
+.project-image .overlay:hover .overlay-content{
     display: block;
-    color: var(--primary-text-color);
 }
 
 .project i{
     font-size: 2.5rem;
+    animation: textShadow 2.5s infinite;
+}
+
+.project-tags i{
+    color: var(--secondary-button-color);
+}
+
+.project-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+.project-links a{
+    margin-right: 2rem;
 }
 
 /*======================================= Footer */
@@ -386,6 +406,7 @@ section{
     border: none;
     border-radius: 8px;
     padding: 1rem;
+    width: 100%;
 }
 .contact-fields::placeholder{
     color: var(--secondary-text-color);
@@ -413,6 +434,36 @@ section{
     color: var(--secondary-text-color);
     animation: textShadow 2.5s infinite;
     padding: 0.5rem;
+}
+
+/* go top button */
+.go-top{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: var(--secondary-text-color);
+    border-radius: 50%;
+    bottom: 20px;
+    right: 50px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.go-top i{
+    font-size: 2rem;
+    color: var(--secondary-button-color);
+}
+
+.go-top:hover{
+    transform: scale(1.2);
+    background: var(--primary-button-color);
+    color: var(--secondary-text-color);
+}
+.go-top:hover i{
+    color: var(--primary-text-color);
 }
 
 /*======================================= Footer */
@@ -508,5 +559,108 @@ footer p{
 @keyframes blinking{
     50% {
         border-bottom: hidden;
+    }
+}
+
+@media (width <= 768px){
+    /* hero terminal */
+    .terminal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        font-size: var(--fs-body);
+        position: relative;
+    }
+
+    .terminal h3{
+        font-size: 2.5rem;
+    }
+
+    .terminal-buttons p{
+        display: none;
+    }
+
+    .terminal-buttons{
+        display: block;
+    }
+
+    /* .terminal-buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .terminal-buttons a{
+        margin: 0;
+        animation: none;
+        border-bottom: 2px solid var(--secondary-text-color);
+        color: var(--primary-text-color);
+    } */
+
+    /* side nav */
+    .terminal-nav{
+        position: fixed;
+        bottom: 0;
+        height: 5rem;
+        width: 100vw;
+        background: var(--bg-secondary-color);
+        align-items: center;
+        flex-direction: row;
+        z-index: 3;
+    }
+
+    /* about me */
+    .grid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-section{
+        margin: 2rem 0;
+    }
+
+    /* projects */
+    .project{
+        display: block;
+        padding: 1rem 0;
+    }
+
+    .project-image .overlay{
+        background: #003f58;
+        opacity: 1;
+    }
+
+    .overlay-content{
+        display: block;
+    }
+
+    .overlay-content p, .overlay-content i{
+        font-size: 3rem;
+    }
+
+    .project-tags{
+        display: block;
+    }
+
+    .project-tags p{
+        margin: 1rem 0;
+    }
+
+    .project-tags i{
+        padding: 0 1rem;
+    }
+
+    /* contact */
+    .contact-form{
+        min-width: 100%;
+    }
+
+    footer{
+        padding-bottom: 6rem;
     }
 }
