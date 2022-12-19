@@ -1,5 +1,6 @@
-let terminalButtons = document.querySelectorAll(".terminal-buttons a");
-let activeTerminalButton = document.getElementsByClassName("active");
+const terminalButtons = document.querySelectorAll(".terminal-buttons a");
+const activeTerminalButton = document.getElementsByClassName("active");
+const activeChevron = document.getElementsByClassName("active-selector-selected");
 const navItems = document.querySelector(".nav-items");
 const hero = document.querySelector(".hero");
 const menuToggle = document.querySelector(".menu-toggle");
@@ -68,6 +69,7 @@ const handleKeyPress = (e) => {
 
 const handleMouseOver = (e) => {
     let terminalButton = e.target;
+    console.log(terminalButton)
 
     if(terminalButton.classList.contains('terminal-btn')){
         activeTerminalButton[0].classList.remove("active");
