@@ -135,10 +135,6 @@ section{
     padding: 2rem;
 }
 
-.terminal-box{
-    grid-column: span 2;
-}
-
 .terminal-nav{
     display: flex;
     flex-direction: column;
@@ -273,6 +269,7 @@ section{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
 .project{
@@ -571,23 +568,30 @@ footer p{
         align-items: center;
         flex-direction: row;
         z-index: 3;
+        margin: 0;
+    }
+
+    .terminal-nav a{
+        margin: 0 2rem;
     }
 
     /* about me */
-    .grid{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     .about-section{
         margin: 2rem 0;
+    }
+
+    .about-timeline{
+        flex-direction: column;
     }
 
     /* projects */
     .project{
         display: block;
         padding: 1rem 0;
+    }
+
+    .projects-container{
+        margin-top: 1rem;
     }
 
     .project-image .overlay{
