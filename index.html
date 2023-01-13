@@ -34,9 +34,9 @@
                     <!-- Button section -->
                     <div class="terminal-buttons">
                         <p>Use arrow keys to change selection!</p>
-                        <span class="primary-text" >> </span><a class="terminal-btn active" name="projects" onclick="navScroll('projects');">Projects</a>
-                        <a class="terminal-btn" name="about" onclick="navScroll('about');">About</a>
-                        <a class="terminal-btn" name="contact" onclick="navScroll('contact');">Contact</a>
+                        <span class="primary-text active-selector" >> </span><a class="terminal-btn active" name="projects" onclick="navScroll('projects');">Projects</a>
+                        <span class="primary-text active-selector" >> </span><a class="terminal-btn" name="about" onclick="navScroll('about');">About</a>
+                        <span class="primary-text active-selector" >> </span><a class="terminal-btn" name="contact" onclick="navScroll('contact');">Contact</a>
                     </div>
                 </div>
             </div>
@@ -96,7 +96,8 @@
             <div class="section-terminal-container">
                 <div class="section-terminal hidden">
                     <h2>Personal Projects</h2>
-                    
+                    <p>I listed a few personal projects below. In addition, I have many more projects that I worked on throughout my work experience.</p>
+
                     <div class="projects-container">
                         <div class="project">
                             <div class="project-image">
@@ -168,13 +169,10 @@
         <section id="contact" class="contact">
             <div class="section-terminal-container">
                     <h1>Contact Me</h1>
-                    <div class="my-email">
-                        <i class='bx bxs-envelope hidden'></i><span>noaherod18@gmail.com</span>
-                    </div>
                     <form action="https://formsubmit.co/noaherod18@gmail.com" method="POST" class="contact-form hidden">
                         <input type="text" name="name" class="contact-fields" placeholder="Your Name" required>
                         <input type="email" name="email" class="contact-fields" placeholder="Your Email" required>
-                        <textarea name="message" id="email-message" cols="30" rows="10" class="email-message contact-fields" placeholder="Your Message Here"></textarea>
+                        <textarea name="message" id="email-message" cols="30" rows="10" class="email-message contact-fields" placeholder="Your Message"></textarea>
                         <input type="submit" value="Send" class="contact-btn">
                     </form>
             </div>
