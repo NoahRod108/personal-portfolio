@@ -40,7 +40,6 @@ h1, h2, h3, h4, h5{
     color: var(--primary-text-color);
     font-size: var(--fs-header);
     animation: textShadow 2.5s infinite;
-    padding: .5rem;
 }
 
 .primary-text{
@@ -94,6 +93,7 @@ section{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 1440px;
 }
 
 /* gradient lines for screen effect */
@@ -117,13 +117,20 @@ section{
 
 /*======================================= Header */
 .terminal{
-    display: grid;
+    /* display: grid;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     min-height: 100vh;
     min-width: 100%;
+    background-color: rgba(50, 0, 100, 0.3);
+    padding: 2rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
     background-color: rgba(50, 0, 100, 0.3);
     padding: 2rem;
 }
@@ -137,8 +144,7 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-    margin: 0 auto;
+    margin-right: 5rem;
     animation: glitch 1s infinite;
 }
 
@@ -165,6 +171,10 @@ section{
     font-size: var(--fs-body);
 }
 
+.terminal-nav a{
+    margin-top: 3rem;
+}
+
 /* Active link on terminal */
 .active{
     color: var(--primary-text-color);
@@ -175,8 +185,31 @@ section{
 }
 
 /*======================================= About */
-.about-me{
-    grid-column: span 2;
+.about-terminal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(50, 0, 100, 0.3);
+    padding: 2rem;
+}
+
+.about-timeline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60%;
+    text-align: center;
 }
 
 .about-section i{
@@ -188,81 +221,7 @@ section{
     padding: 2rem;
 }
 
-/* .timeline{
-    position: relative;
-    margin: 0 auto;
-}
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background: var(--secondary-text-color);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-  }
-
-  .li-wrapper{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background: inherit;
-    width: 50%;
-    color: var(--primary-button-color);
-    font-size: 1.5rem;
-  }
-
-  .li-wrapper p{
-    font-size: 1.5rem;
-    text-align: left;
-    padding: 1rem 0;
-}
-
-.li-wrapper h4{
-    margin-right: 1rem;
-    font-size: 2rem;
-    padding: 0.5rem;
-    border: 2px dashed var(--secondary-text-color);
-  }
-
-  .li-wrapper::after {
-    content: '<>';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -12px;
-    background: var(--bg-secondary-color);
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-
-  .left{
-    left: 0;
-  }
-
-  .left p{
-    padding-right: 1rem;
-  }
-
-  .right{
-    left: 50%;
-  }
-.right::after {
-    left: -12px;
-  }
-
-  .right h4{
-    margin-left: 1rem;
-  }
-
-  .right p{
-    padding-left: 1rem;
-  } */
-
-/*======================================= About */
+/*======================================= Skills */
 .skills-container{
     display: flex;
     justify-content: center;
@@ -393,6 +352,7 @@ section{
     flex-direction: column;
     gap: 2rem;
     width: 60%;
+    max-width: 1440px;
     height: 100%;
     padding: 2rem;
     border-radius: 8px;
