@@ -160,7 +160,9 @@ section{
 
 .terminal-buttons a{
     margin-right: 3rem;
+    border-bottom: 2px solid transparent;
     cursor: pointer;
+    padding: 8px;
 }
 
 .terminal-nav a i{
@@ -174,7 +176,6 @@ section{
 /* Active link on terminal */
 .active{
     color: var(--primary-text-color);
-    border-bottom: 2px solid var(--primary-text-color);
     animation-name: blinking;
     animation-duration: 1.2s;
     animation-iteration-count: infinite;
@@ -515,7 +516,7 @@ footer p{
 
 @keyframes blinking{
     50% {
-        border-bottom: hidden;
+        border-bottom: 2px solid var(--primary-text-color);
     }
 }
 
@@ -543,21 +544,6 @@ footer p{
         display: block;
     }
 
-    /* .terminal-buttons{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .terminal-buttons a{
-        margin: 0;
-        animation: none;
-        border-bottom: 2px solid var(--secondary-text-color);
-        color: var(--primary-text-color);
-    } */
-
     /* side nav */
     .terminal-nav{
         position: fixed;
@@ -575,6 +561,17 @@ footer p{
         margin: 0 2rem;
     }
 
+    .terminal-buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .terminal-buttons a{
+        margin: 1rem 0;
+    }
+
     /* about me */
     .about-section{
         margin: 2rem 0;
@@ -584,10 +581,22 @@ footer p{
         flex-direction: column;
     }
 
+    .about-terminal{
+        text-align: center;
+    }
+
+    .skills-container{
+        padding-top: 2rem;
+    }
+
     /* projects */
     .project{
         display: block;
         padding: 1rem 0;
+    }
+
+    .projects p{
+        padding: 2rem;
     }
 
     .projects-container{
