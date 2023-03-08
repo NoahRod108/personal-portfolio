@@ -113,6 +113,7 @@ section{
     background-size: 100% 8px;
     z-index: 3;
     pointer-events: none;
+    animation: pan 10s infinite linear;
 }
 
 /*======================================= Header */
@@ -518,6 +519,16 @@ footer p{
     50% {
         border-bottom: 2px solid var(--primary-text-color);
     }
+}
+
+@keyframes pan{
+        from{
+            background-position: 0% 0%;
+        }
+
+        to{
+            background-position: 0% -100%;
+        }
 }
 
 @media (width <= 768px){
