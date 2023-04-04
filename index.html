@@ -7,190 +7,108 @@
     <title>Noah Rodriguez</title>
     <!-- Favicon here -->
     <!-- CSS file -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
 </head>
 <body>
 
-    <!-- Hero -->
-    <div class="crt">
-        <header>
-            <div id="terminal" class="terminal">
-                <!-- side nav -->
-                <div class="terminal-nav">
-                    <a href="https://github.com/NoahRod108" target="_blank"><i class="devicon-github-original"></i></a>
-                    <a href="https://www.linkedin.com/in/noah-rodriguez-8121041aa/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
-                    <a href="https://noahrod108.github.io/digitalResume/" target="_blank"><i class='bx bx-download'></i></a>
+    <!-- Navigation -->
+    <header class="header">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <span class="logo-name clr-text-secondary">Noah.dev</span>
+                    </div>
+    
+                    <button class="mobile-nav" aria-controls="navbar" aria-expanded="false">
+                        <img class="icon-hamburger" src="./assets/images/icon-menu.svg" alt="" aria-hidden="true">
+                        <img class="icon-hamburger-close" src="./assets/images/icon-menu-close.svg" alt="" aria-hidden="true">
+                        <span class="sr-only">Menu</span>
+                    </button>
+                    <nav class="navbar">
+                        <ul aria-label="navbar" role="list" id="navbar" class="nav-list">
+                            <a href=""><li data-hacked data-value="Home">Home</li></a>
+                            <a href=""><li data-hacked data-value="Projects">Projects</li></a>
+                            <a href=""><li data-hacked data-value="About Me">About Me</li></a>
+                            <a href=""><li data-hacked data-value="Contact">Contact</li></a>
+                        </ul>
+                    </nav>
                 </div>
 
-                <div class="terminal-box">
-                    <p>Hello, I'm</p>
-                    <h1>Noah Rodriguez</h1>
-                    <h3>Programmer * Web Developer</h3>
-    
-                    
-                    <!-- Button section -->
-                    <div class="terminal-buttons">
-                        <p>Use arrow keys to change selection!</p>
-                        <span class="primary-text active-selector" ></span><a class="terminal-btn active" name="projects" onclick="navScroll('projects');">Projects</a>
-                        <span class="primary-text active-selector" ></span><a class="terminal-btn" name="about" onclick="navScroll('about');">About</a>
-                        <span class="primary-text active-selector" ></span><a class="terminal-btn" name="contact" onclick="navScroll('contact');">Contact</a>
+                <div class="hero">
+                    <div class="hero-nav">
+                        <a class="hero-nav-item" href=""><i class="bx bxl-github clr-text-secondary"></i></a>
+                        <a class="hero-nav-item" href=""><i class="bx bxl-linkedin clr-text-secondary"></i></a>
+                        <a class="hero-nav-item" href=""><i class="bx bx-download clr-text-secondary"></i></a>
+                    </div>
+
+                    <div class="hero-content">
+                        <h1 data-value="Hello I'm" class="fs-secondary-heading clr-text-secondary">Hello I'm</h1>
+                        <h1 class="fs-primary-heading">Noah Rodriguez</h1>
+                        <h1 class="fs-primary-heading text-glitch"><span data-title-hacked data-value="">Front-end Developer</span></h1>
+                        <!-- <p>Tech stack</p> -->
                     </div>
                 </div>
             </div>
         </header>
 
-        <section id="about" class="about">
-            <div class="about-terminal">
-                <div class="section-terminal about-me hidden">
-                    <h2>About Me</h2>
-                    <p>My name is Noah Rodriguez and I have a passion for web development. I have a deep interest in technology and have even started down the path of UI/UX. I want to sharpen my skills even further and learn all I can from amazing people.</p>
-                    <p>Currently, I am working as a Solutions Engineer at my nearby university. I help manage our current web/mobile applications, working mostly on the backend.</p>
-                </div>
-                <div class="about-timeline">
-                    <div class="about-section">
-                        <div>
-                            <i class='bx bxs-graduation'></i>
-                            <p>2015 - 2020</p>
+        <main>
+            <section>
+                <div class="container">
+                    <div class="projects section">
+                        <div class="left">
+                            <ul class="project-list" role="list">
+                                <li class="project-item" data-project-name="ecommerce">Spooky Spirit</li>
+                                <li class="project-item" data-project-name="pokemon">Guess That Pokemon</li>
+                                <li class="project-item" data-project-name="admin">Admin Portal</li>
+                            </ul>
                         </div>
-                        <p class="primary-text">Bachelor of Science in Computer Information Technology</p>
-                        <p>Purdue University Northwest, Westville, IN</p>
-                    </div>                
-                    <div class="about-section">
-                        <div>
-                            <i class='bx bxs-briefcase'></i>
-                            <p>2020 - current</p>
-                        </div>
-                        <p class="primary-text">Solutions Engineer</p>
-                        <p>University</p>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-
-        <section id="skills" class="skills">
-            <div class="section-terminal-container">
-                <div class="section-terminal hidden">
-                    <h2>Skills</h2>
-                    <div class="skills-container">
-                        <i class="devicon-html5-plain skill hidden"></i>
-                        <i class="devicon-css3-plain skill hidden"></i>
-                        <i class="devicon-javascript-plain skill hidden"></i>
-                        <i class="devicon-php-plain skill hidden"></i>
-                        <i class="devicon-react-original skill hidden"></i>
-                        <i class="devicon-materialui-plain skill hidden"></i>
-                        <i class="devicon-sass-original skill hidden"></i>
-                        <i class="devicon-npm-original-wordmark skill hidden"></i>
-                        <i class="devicon-nodejs-plain skill hidden"></i>
-                        <i class="devicon-express-original skill hidden"></i>
-                        <i class="devicon-mysql-plain skill hidden"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <div class="section-terminal-container">
-                <div class="section-terminal hidden">
-                    <h2>Personal Projects</h2>
-                    <p>I listed a few personal projects below. In addition, I have many more projects that I worked on throughout my work experience.</p>
-
-                    <div class="projects-container">
-                        <div class="project">
-                            <div class="project-image">
-                                <img src="./assets/images/guess_that_pokemon.PNG" alt="">
-                                <div class="overlay">
-                                    <div class="overlay-content">
-                                        <p class="project-text">Guess That Pokemon</p>
-                                        <div class="project-links">
-                                            <a href="https://github.com/NoahRod108/guess-that-pokemon" target="_blank"><i class="devicon-github-original"></i></a>
-                                            <a href="https://noahrod108.github.io/guess-that-pokemon/" target="_blank"><i class='bx bx-link-external'></i></a>
-                                        </div>
+                        
+                        <div class="right">
+                            <div class="project-card" data-value="ecommerce">
+                                <div class="project-image"></div>
+                                <div class="card-overlay"></div>
+                                <div class="project-content">
+                                    <div class="project-links">
+                                        <a class="hero-nav-item" href=""><i class="bx bxl-github clr-text-primary fs-primary-heading screen-glow"></i></a>
                                     </div>
+                                    <p class="fw-bold screen-glow">Spooky Spirit Halloween</p>
                                 </div>
                             </div>
-                            <div class="project-tags">
-                                <p>Created with: </p>
-                                <i class="devicon-react-original"></i>
-                            </div>
-                        </div>
 
-                        <div class="project">
-                            <div class="project-image">
-                                <img src="./assets/images/SSH.PNG" alt="">
-                                <div class="overlay">
-                                    <div class="overlay-content">
-                                        <p class="project-text">Spooky Spirit</p>
-                                        <div class="project-links">
-                                            <!-- <a href="https://github.com/NoahRod108/spooky-spirit" target="_blank"><i class="devicon-github-original"></i></a> -->
-                                            <a href="https://spooky-spirit.onrender.com/" target="_blank"><i class='bx bx-link-external'></i></a>
-                                        </div>
+                            <div class="project-card" data-value="pokemon">
+                                <div class="project-image"></div>
+                                <div class="card-overlay"></div>
+                                <div class="project-content">
+                                    <div class="project-links">
+                                        <a class="hero-nav-item" href=""><i class="bx bxl-github clr-text-primary fs-primary-heading screen-glow"></i></a>
+                                        <a class="hero-nav-item" href=""><i class="bx bxl-github clr-text-primary fs-primary-heading screen-glow"></i></a>
                                     </div>
+                                    <p class="fw-bold screen-glow">Guess That Pokemon!</p>
                                 </div>
                             </div>
-                            <div class="project-tags">
-                                <p>created with: </p>
-                                <i class="devicon-react-original"></i>
-                                <i class="devicon-mongodb-plain"></i>
-                                <i class="devicon-redux-original"></i>
-                                <i class="devicon-express-original"></i>
-                                <i class="devicon-nodejs-plain"></i>
-                            </div>
-                        </div>
 
-                        <div class="project">
-                            <div class="project-image">
-                                <img src="./assets/images/admin_portal.PNG" alt="">
-                                <div class="overlay">
-                                    <div class="overlay-content">
-                                        <p class="project-text">Admin portal</p>
-                                        <div class="project-links">
-                                            <a href="https://github.com/NoahRod108/admin-portal" target="_blank"><i class="devicon-github-original"></i></a>
-                                            <a href="https://noahrod108.github.io/admin-portal/" target="_blank"><i class='bx bx-link-external'></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-tags">
-                                <p>Created with: </p>
-                                <i class="devicon-react-original"></i>
-                                <i class="devicon-materialui-plain"></i>
-                                <i class="devicon-sass-original"></i>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="contact" class="contact">
-            <div class="section-terminal-container">
-                    <h1>Contact Me</h1>
-                    <form action="https://formsubmit.co/noaherod18@gmail.com" method="POST" class="contact-form hidden">
-                        <input type="text" name="name" class="contact-fields" placeholder="Your Name" required>
-                        <input type="email" name="email" class="contact-fields" placeholder="Your Email" required>
-                        <textarea name="message" id="email-message" cols="30" rows="10" class="email-message contact-fields" placeholder="Your Message"></textarea>
-                        <input type="submit" value="Send" class="contact-btn">
-                    </form>
-            </div>
-        </section>
-    </div>
+            <section>
+                <div class="container">
+                    <div class="about-me section">
+                        <div class="left">
+                            
+                        </div>
+                        
+                        <div class="right">
 
-    <div class="go-top" onclick="navScroll('terminal')">
-        <i class='bx bx-chevron-up'></i>
-    </div>
-
-    <footer>
-        <div>
-            <p>Designed & Developed By Noah Rodriguez</p>
-        </div>
-        <div>
-            <p>COPYRIGHT &copy 2022 Noah Rodriguez</p>
-        </div>
-    </footer>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
     <!-- JS file -->
     <script src="./JS/script.js" defer></script>
