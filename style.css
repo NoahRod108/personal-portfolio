@@ -83,6 +83,11 @@ i{
 }
 
 /* nav */
+.logo > a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .nav-wrapper{
     display: flex;
     justify-content: space-between;
@@ -186,15 +191,23 @@ i{
 }
 
 /* projects */
+.projects > h1{
+    margin-bottom: 2rem;
+    font-size: var(--fs-secondary-heading);
+}
+
 .project-item{
+    background-color: transparent;
+    border: none;
     cursor: pointer;
     font-size: 70px;
     color: transparent;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     -webkit-text-stroke: 1px var(--clr-secondary);
+    text-align: left;
 }
 
-.project-item:hover{
+.project-item:hover, .project-item:focus{
     animation: textShadow 2.5s infinite;
 }
 
