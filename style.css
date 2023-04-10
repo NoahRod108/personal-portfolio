@@ -179,7 +179,7 @@ i{
 .hero-nav{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .hero-nav-item{
@@ -189,6 +189,32 @@ i{
 .hero-nav-item i:hover{
     transform: scale(1.2);
     animation: textShadow 2.5s infinite;
+}
+
+.hero-content{
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 50rem){
+    .hero{
+        display: flex;
+        row-gap: 5rem;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-content{
+        text-align: center;
+    }
+
+    .hero-nav{
+        flex-direction: row;
+    }
+
+    .hero-nav a i{
+        font-size: 3rem;
+    }
 }
 
 /* projects */
