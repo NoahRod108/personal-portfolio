@@ -16,8 +16,9 @@
     --fw-bold: 700;
 
     --fs-body: 1.2rem;
-    --fs-button: 0.875rem;
+    --fs-button: 1rem;
     --fs-primary-heading: 3.5rem;
+    --fs-primary-content: 4.5rem;
     --fs-secondary-heading: 2rem;
 }
 
@@ -195,7 +196,7 @@ i{
     background-color: transparent;
     border: none;
     cursor: pointer;
-    font-size: 70px;
+    font-size: var(--fs-primary-content);
     color: transparent;
     margin-bottom: 2rem;
     -webkit-text-stroke: 1px var(--clr-secondary);
@@ -319,6 +320,54 @@ i{
     }
 }
 
+/* about me */
+.skills{
+    display: flex;
+    position: relative;
+    max-width: 350px;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skills > i{
+    font-size: var(--fs-primary-content);
+    color: var(--clr-secondary);
+}
+
+/* contact */
+.contact form{
+    display: flex;
+    row-gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact input,textarea{
+    background-color: var(--clr-secondary);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.contact input{
+    width: 50%;
+}
+
+.contact textarea{
+    width: 100%;
+}
+
+.contact button:hover{
+    transform: scale(1.1);
+}
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -415,6 +464,7 @@ i{
 .container{
     width: min(1110px, 100% - 2rem);
     margin-inline: auto;
+    height: 100svh;
 }
 
 .mb-1{
@@ -429,7 +479,6 @@ i{
     display: grid;
     grid-template-columns: 1fr minmax(min(10rem, 100%), 1fr);
     align-items: center;
-    height: 100svh;
 }
 
 .left, .right{
@@ -440,4 +489,15 @@ i{
     text-shadow: 0 0 10px var(--clr-primary),
     0 0 20px var(--clr-primary),
     0 0 120px var(--clr-primary);
+}
+
+.btn{
+    padding: 1rem 4rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--clr-accent);
+    color: var(--clr-primary);
+    font-size: var(--fs-button);
+    margin: 2rem;
 }

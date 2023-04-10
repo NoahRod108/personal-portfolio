@@ -17,7 +17,7 @@
     <!-- Navigation -->
     <header class="header">
             <div class="container">
-                <div class="nav-wrapper">
+                <div id="hero" class="nav-wrapper">
                     <div class="logo">
                         <a href="#"><span class="logo-name clr-text-secondary" data-hacked data-value="Noah.dev">Noah.dev</span></a>
                     </div>
@@ -57,7 +57,7 @@
         <main>
             <section>
                 <div class="projects container">
-                    <div class="section">
+                    <div id="projects" class="section">
                         <div class="left">
                             <h1 class="fs-secondary-heading fw-bold mb-2">Projects</h1>
                             <ul class="project-list" role="list">
@@ -73,7 +73,7 @@
                                 <div class="card-overlay"></div>
                                 <div class="project-content">
                                     <div class="project-links">
-                                        <a class="hero-nav-item" href=""><i class="bx bxl-github clr-text-primary fs-primary-heading screen-glow"></i></a>
+                                        <a class="hero-nav-item" href="https://spooky-spirit.onrender.com/"><i class="bx bx-link-external clr-text-primary fs-primary-heading screen-glow"></i></a>
                                     </div>
                                     <p class="fw-bold screen-glow">Spooky Spirit Halloween</p>
                                 </div>
@@ -110,22 +110,66 @@
 
             <section>
                 <div class="container">
-                    <div class="about-me section">
+                    <div id="about" class="about-me section">
                         <div class="left">
                             <h1 class="fs-secondary-heading fw-bold mb-2">About Me</h1>
-                            
+                            <div class="skills">
+                                <i class="devicon-html5-plain text-glitch"></i>
+                                <i class="devicon-css3-plain text-glitch"></i>
+                                <i class="devicon-javascript-plain text-glitch"></i>
+                                <i class="devicon-php-plain text-glitch"></i>
+                                <i class="devicon-mysql-plain text-glitch"></i>
+                                <i class="devicon-react-original text-glitch"></i>
+                                <i class="devicon-materialui-plain text-glitch"></i>
+                                <i class="devicon-npm-original-wordmark text-glitch"></i>
+                                <i class="devicon-nodejs-plain text-glitch"></i>
+                            </div>                            
                         </div>
                         
                         <div class="right">
-                            <h1 class="fs-secondary-heading fw-bold mb-2">A passionate web developer based in Indiana, United States</h1>
-                            <p>This is a test sentence</p>
+                            <div class="about-content">
+                                <h1 class="fs-secondary-heading fw-bold mb-2 ">A passionate web developer based in Indiana, United States</h1>
+                                <p class="mb-2">Hi! I am a web developer with a few years of professional experience under my belt. I love the process of writing efficient code in HTML, CSS, and JavaScript.</p>
+                                <p>When I'm not coding You can find me playing tabletop games or watching my favorite shows.</p>
+                            </div>
                         </div>
+                    </div>
+                    <!-- <div class="mt-2 history">
+                        <ul class="timeline">
+                            <li data-year="2015" data-text="My first semester at PNW for electrical computer engineering and technology."></li>
+                            <li data-year="" data-text=""></li>
+                            <li data-year="" data-text=""></li>
+                            <li data-year="" data-text=""></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <div id="contact" class="contact">
+                        <h1 class="fs-secondary-heading fw-bold mb-2">Contact me</h1>
+                        <form action="https://formsubmit.co/noaherod18@gmail.com" method="POST">
+                            <input placeholder="Your name" type="text" name="name" required>
+                            <input placeholder="Email Address" type="email" name="email" required>
+                            <textarea placeholder="Your message" name="message" id="message" cols="30" rows="10"></textarea>
+                            <button type="submit" class="btn">Send</button>
+                       </form>
                     </div>
                 </div>
             </section>
         </main>
 
+        <footer>
+            <div>
+                Designed & Developed By Noah Rodriguez
+            </div>
+            <div>
+                COPYRIGHT &copy 2023 Noah Rodriguez
+            </div>
+        </footer>
     <!-- JS file -->
+    <script type="module" src="./JS/main.js"></script>
     <script src="./JS/script.js" defer></script>
 </body>
 </html>
