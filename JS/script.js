@@ -131,7 +131,9 @@ projectNames.addEventListener('click', (e) =>{
     // find project selected and display correct card
     let selected = e.target;
 
+    // toggled correct card when clicked
     projectCards.forEach((card) =>{
+        // toggle attribute if toggled
         if(card.hasAttribute("data-visible")) card.toggleAttribute("data-visible");
 
         if(card.dataset.value === selected.dataset.projectName){
@@ -140,11 +142,11 @@ projectNames.addEventListener('click', (e) =>{
     });
 });
 
-// letter effect
+// letter effects
 textHacked.forEach(scrambleText);
 changeHeading();
 
-
+// FUNCTIONS
 function scrambleText(item){
     item.onmouseover = event => {
         let iteration = 0;
@@ -182,6 +184,7 @@ function changeHeading(){
     }, 5000);
 }
 
+// animation for hero section heading
 function scrambleHeading(role){
     nameTitle.setAttribute("data-value", letters2[role]);
     
@@ -201,9 +204,6 @@ function scrambleHeading(role){
             // randomize character list
             return letters[Math.floor(Math.random() * 26)];
         }).join("");
-        
-
-
 
         if(iteration >= nameTitle.dataset.value.length){ 
             clearInterval(interval);
