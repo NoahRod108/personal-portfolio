@@ -319,6 +319,18 @@ i{
     margin-bottom: 5rem;
 }
 
+@media (max-width: 50rem){
+    .project-list{
+        display: none;
+    }
+
+    .project-card{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 @keyframes card-overlay{
     from{
         background-position: 0% 0%;
@@ -336,13 +348,6 @@ i{
 
     to{
         background-position: 100% 100%;
-    }
-}
-
-@media(min-width: 50rem){
-    .right{
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
     }
 }
 
@@ -384,6 +389,17 @@ i{
 
 .contact button:hover{
     transform: scale(1.1);
+}
+
+@media (max-width: 50rem){
+    .skills{
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .about-me{
+        margin-top: 2rem;
+    }
 }
 
 /* footer */
@@ -489,8 +505,8 @@ footer{
 
 .container{
     width: min(1110px, 100% - 2rem);
+    min-height: 100vh;
     margin-inline: auto;
-    height: 100svh;
 }
 
 .mb-1{
@@ -501,14 +517,14 @@ footer{
     margin-bottom: 2rem;
 }
 
-.section{
-    display: grid;
-    grid-template-columns: 1fr minmax(min(10rem, 100%), 1fr);
-    align-items: center;
+.mt-2{
+    margin-top: 2rem;
 }
 
-.left, .right{
-    min-height: 100%;
+.section-wrapper{
+    display: grid;
+    grid-template-columns: 1fr minmax(min(10rem, 100%), 1fr);
+    align-items: start;
 }
 
 .screen-glow{
@@ -526,4 +542,13 @@ footer{
     color: var(--clr-primary);
     font-size: var(--fs-button);
     margin: 2rem;
+}
+
+@media (max-width: 50rem){
+    .section-wrapper, .left, .right{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        min-height: 100%;
+    }
 }
