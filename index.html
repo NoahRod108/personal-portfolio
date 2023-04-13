@@ -19,7 +19,7 @@
             <div class="container">
                 <div id="hero" class="nav-wrapper">
                     <div class="logo">
-                        <a href="#"><span class="logo-name clr-text-secondary" data-hacked data-value="Noah.dev">Noah.dev</span></a>
+                        <a href="#" class="logo-name clr-text-secondary" data-hacked data-value="Noah.dev">Noah.dev</a>
                     </div>
     
                     <button class="mobile-nav" aria-controls="navbar" aria-expanded="false">
@@ -29,10 +29,10 @@
                     </button>
                     <nav class="navbar">
                         <ul aria-label="navbar" role="list" id="navbar" class="nav-list">
-                            <a href=""><li data-hacked data-value="Home">Home</li></a>
-                            <a href=""><li data-hacked data-value="Projects">Projects</li></a>
-                            <a href=""><li data-hacked data-value="About Me">About Me</li></a>
-                            <a href=""><li data-hacked data-value="Contact">Contact</li></a>
+                            <a href="#"><li data-hacked data-value="Home">Home</li></a>
+                            <a href="#projects"><li data-hacked data-value="Projects">Projects</li></a>
+                            <a href="#about"><li data-hacked data-value="About Me">About Me</li></a>
+                            <a href="#contact"><li data-hacked data-value="Contact">Contact</li></a>
                         </ul>
                     </nav>
                 </div>
@@ -54,9 +54,9 @@
         </header>
 
         <main>
-            <section>
+            <section id="projects">
                 <div class="projects container">
-                    <div id="projects" class="section-wrapper">
+                    <div class="section-wrapper">
                         <div class="left">
                             <h1 class="fs-secondary-heading fw-bold mb-2">Projects</h1>
                             <ul class="project-list" role="list">
@@ -107,9 +107,9 @@
                 </div>
             </section>
 
-            <section>
-                <div class="container">
-                    <div id="about" class="about-me section-wrapper">
+            <section id="about">
+                <div class="about-me container">
+                    <div class="section-wrapper">
                         <div class="left">
                             <h1 class="fs-secondary-heading fw-bold mb-2">About Me</h1>
                             <div class="skills">
@@ -133,20 +133,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="mt-2 history">
-                        <ul class="timeline">
-                            <li data-year="2015" data-text="My first semester at PNW for electrical computer engineering and technology."></li>
-                            <li data-year="" data-text=""></li>
-                            <li data-year="" data-text=""></li>
-                            <li data-year="" data-text=""></li>
-                        </ul>
-                    </div> -->
                 </div>
             </section>
 
-            <section>
-                <div class="container">
-                    <div id="contact" class="contact">
+            <section id="contact">
+                <div class="contact container">
+                    <div>
                         <h1 class="fs-secondary-heading fw-bold mb-2">Contact me</h1>
                         <form action="https://formsubmit.co/noaherod18@gmail.com" method="POST">
                             <input placeholder="Your name" type="text" name="name" required>
@@ -159,7 +151,7 @@
             </section>
         </main>
 
-        <footer>
+        <footer class="fs-small-body">
             <div>
                 Designed & Developed By Noah Rodriguez
             </div>

@@ -15,7 +15,7 @@
     --fw-regular: 400;
     --fw-bold: 700;
 
-    --fs-body: 1.2rem;
+    --fs-body: 1.4rem;
     --fs-button: 1rem;
     --fs-primary-heading: 3.5rem;
     --fs-primary-content: 4.5rem;
@@ -50,6 +50,7 @@ html:focus-within {
 html,
 body{
     min-height: 100%;
+    scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
@@ -79,6 +80,11 @@ i{
     font-size: 2rem;
 }
 
+.projects, .about-me, .contact{
+    display: flex;
+    align-items: center;
+}
+
 .header{
     padding-top: 2.2rem;
 }
@@ -87,6 +93,11 @@ i{
 .logo > a{
     cursor: pointer;
     text-decoration: none;
+}
+
+.logo > a:hover{
+    color: var(--clr-primary);
+    animation: textShadow 2s infinite;
 }
 
 .nav-wrapper{
@@ -123,9 +134,10 @@ i{
         display: none;
         position: fixed;
         padding: 4rem;
-        inset: 6rem 5rem auto;
-        background: red;
+        inset: 6rem 5rem;
+        background: var(--clr-accent);
         border-radius: 0.25rem;
+        z-index: 10;
     }
 
     .header[data-overlay]::before{
@@ -137,8 +149,9 @@ i{
 
     .nav-list{
         display: grid;
-        gap: 1.5rem;
+        gap: 5rem;
         text-align: center;
+        font-size: 2.5rem;
         font-weight: var(--fw-bold);
     }
 
@@ -488,6 +501,9 @@ footer{
 .fs-secondary-heading{
     font-size: var(--fs-secondary-heading);
 }
+.fs-small-body{
+    font-size: 1rem;
+}
 
 .clr-text-primary{
     color: var(--clr-primary);
@@ -524,7 +540,6 @@ footer{
 .section-wrapper{
     display: grid;
     grid-template-columns: 1fr minmax(min(10rem, 100%), 1fr);
-    align-items: start;
 }
 
 .screen-glow{
