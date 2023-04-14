@@ -611,7 +611,7 @@ footer{
 }
 
 @media (max-width: 50rem){
-    .section-wrapper, .left, .right{
+    .section-wrapper, .hero, .left, .right{
         display: flex;
         flex-direction: column;
         row-gap: 2rem;
