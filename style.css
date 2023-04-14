@@ -130,6 +130,14 @@ i{
 }
 
 @media (max-width: 50rem){
+    .header{
+        padding: 0;
+    }
+
+    .logo, .mobile-nav{
+        margin-top: 1rem;
+    }
+
     .navbar{
         display: none;
         position: fixed;
@@ -143,7 +151,6 @@ i{
         height: 100%;
         width: 100%;
         background-size: 100% 10px;
-        border-radius: 1rem;
         border: 2px solid var(--clr-accent);
         animation: card-overlay 20s infinite linear;
     }
@@ -189,7 +196,6 @@ i{
         display: block;
         position: fixed;
         right: 1rem;
-        top: 4rem;
         cursor: pointer;
         background: transparent;
         border: 0;
