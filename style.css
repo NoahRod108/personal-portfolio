@@ -262,6 +262,7 @@ i{
 
     .hero-nav{
         flex-direction: row;
+        margin-top: 2rem;
     }
 
     .hero-nav a i{
@@ -611,7 +612,7 @@ footer{
 }
 
 @media (max-width: 50rem){
-    .section-wrapper, .hero, .left, .right{
+    .section-wrapper, .left, .right{
         display: flex;
         flex-direction: column;
         row-gap: 2rem;
