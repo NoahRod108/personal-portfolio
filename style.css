@@ -133,18 +133,31 @@ i{
     .navbar{
         display: none;
         position: fixed;
-        padding: 4rem;
-        inset: 6rem 5rem;
-        background: var(--clr-accent);
-        border-radius: 0.25rem;
         z-index: 10;
+        background: linear-gradient(
+            rgb(0, 101, 160, 0.20),
+            rgb(0, 101, 160, 0.20) 5px,
+            transparent 10px,
+            transparent 5px
+        );
+        height: 100%;
+        width: 100%;
+        background-size: 100% 10px;
+        border-radius: 1rem;
+        border: 2px solid var(--clr-accent);
+        animation: card-overlay 20s infinite linear;
     }
 
     .header[data-overlay]::before{
         content: "";
         position: fixed;
         inset: 0;
-        background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));
+        z-index: 10;
+        background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9));
+    }
+
+    .header[data-overlay]::before + .project-card{
+        display: none;
     }
 
     .nav-list{
@@ -155,6 +168,10 @@ i{
         font-weight: var(--fw-bold);
     }
 
+    .nav-list > a{
+        color: #fff;
+    }
+
     .nav-list a:hover,
     .nav-list a:focus{
         color: var(--clr-primary);
@@ -162,21 +179,43 @@ i{
     }
 
     .navbar[data-visible]{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        animation: mobile-pan 1s ease-in-out;
     }
 
     .mobile-nav{
         display: block;
         position: fixed;
         right: 1rem;
+        top: 4rem;
         cursor: pointer;
         background: transparent;
         border: 0;
         padding: 0.5rem;
+        z-index: 11;
     }
     
-    .mobile-nav .icon-hamburger-close{
+    .icon-hamburger-close{
         display: none;
+    }
+
+    .mobile-nav[aria-expanded="true"] > img{
+        display: none;
+    }
+    .mobile-nav[aria-expanded="true"] img:nth-child(2){
+        display: block;
+    }
+}
+
+@keyframes mobile-pan{
+    from{
+        left: 100%;
+    }
+
+    to{
+        left: 0%;
     }
 }
 
@@ -557,6 +596,18 @@ footer{
     color: var(--clr-primary);
     font-size: var(--fs-button);
     margin: 2rem;
+}
+
+@media (max-width: 50rem){
+    .btn{
+        padding: 2rem 8rem;
+        font-size: 1.5rem;
+    }
+}
+
+.stop-scrolling{
+    height: 100%;
+    overflow: hidden;
 }
 
 @media (max-width: 50rem){

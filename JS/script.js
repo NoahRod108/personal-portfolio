@@ -16,7 +16,17 @@ mobileNav.addEventListener('click', () =>{
     navbar.hasAttribute("data-visible") ? mobileNav.setAttribute("aria-expanded", false) : mobileNav.setAttribute("aria-expanded", true);
     navbar.toggleAttribute("data-visible");
     header.toggleAttribute("data-overlay");
+
+    navbar.hasAttribute("data-visible") ? document.body.classList.add("stop-scrolling") : document.body.classList.remove("stop-scrolling");
 });
+
+navbar.addEventListener('click', (e) => {
+    navbar.hasAttribute("data-visible") ? mobileNav.setAttribute("aria-expanded", false) : mobileNav.setAttribute("aria-expanded", true);
+    navbar.toggleAttribute("data-visible");
+    header.toggleAttribute("data-overlay");
+
+    navbar.hasAttribute("data-visible") ? document.body.classList.add("stop-scrolling") : document.body.classList.remove("stop-scrolling");
+})
 
 projectNames.addEventListener('click', (e) =>{
     // find project selected and display correct card
