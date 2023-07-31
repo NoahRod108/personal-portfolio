@@ -346,6 +346,16 @@ i{
 }
 .project-card:nth-child(3) > .project-image{
     position: absolute;
+    background-image: url("assets/images/promptopia.PNG");
+    height: 100%;
+    width: 100%;
+    filter: sepia(100%) hue-rotate(180deg);
+    background-size: 250%;
+    opacity: 0.5;
+    animation: card-image 15s infinite linear;
+}
+.project-card:nth-child(4) > .project-image{
+    position: absolute;
     background-image: url("assets/images/admin_portal.PNG");
     height: 100%;
     width: 100%;
